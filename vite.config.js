@@ -11,6 +11,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  test: {
+    environment: 'jsdom',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json-summary', 'json'],
+      include: ['src/products/productFile.js', 'src/api.js'],
+    },
+  },
   server: {
     port: 5173,
     // In development /api goes to the store backend (porodo/main.py), like the storefront does.

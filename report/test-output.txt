@@ -1,0 +1,22 @@
+FixItUp-style consolidated test run — MSouq Admin (FT3)
+============================================================
+
+> vitest run --coverage (67 tests) ... ok (3.5 s)
+> npm run build ... ok (1.2 s)
+
+Execution summary
+  Technique / level                           Executed    Passed    Failed
+  Equivalence class partitioning (ECP)              16        16         0
+  Boundary value analysis (BVA)                     13        13         0
+  Decision tables (cause-effect) (DT)                8         8         0
+  White box (paths, MC/DC) (WB)                      6         6         0
+  Other unit tests (UT)                             18        18         0
+  Other integration tests (IT)                       6         6         0
+  Total (automated)                                 67        67         0
+
+  Coverage (productFile.js, api.js): 67.64% functions, 75.72% lines, 69.94% branches
+  Build: PASS
+
+Failing test cases: none — all designed cases that were automated are passing.
+
+Result: 0 of 67 automated FT3 test cases failing.

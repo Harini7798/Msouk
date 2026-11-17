@@ -239,7 +239,7 @@ watch(() => draft.value.name, () => { showErrors.value = false })
       <!-- Name + similar products -->
       <section class="stack">
         <label class="field">Name
-          <input ref="nameInput" v-model="draft.name" type="text" placeholder="e.g. Redmi 17 4/128GB - Black" />
+          <input ref="nameInput" v-model="draft.name" type="text" :maxlength="LIMITS.name" placeholder="e.g. Redmi 17 4/128GB - Black" />
           <span class="hint">Put the color at the end after “ - ”, like the rest of the catalogue.</span>
         </label>
 

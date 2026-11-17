@@ -5,7 +5,7 @@
 const FIELD_ORDER = ['id', 'name', 'price', 'original_price', 'short_description', 'description',
   'image_url', 'category', 'specs', 'color', 'variant_group', 'badges', 'availability']
 
-export const LIMITS = { color: 50, variantGroup: 100 }
+export const LIMITS = { color: 50, variantGroup: 100, name: 150 }
 
 /** Parses a products.json text into a list of products, or throws a readable error. */
 export function parseProductsFile(text) {
@@ -101,6 +101,7 @@ export function checkProduct(p, groupSizes = {}) {
   const warnings = []
   if (!Number.isInteger(p.id) || p.id < 0) errors.push('ID must be a whole number, 0 or more.')
   if (!(p.name || '').trim()) errors.push('Name is required.')
+  else if (p.name.trim().length > LIMITS.name) errors.push(`Name can be at most ${LIMITS.name} characters.`)
   const price = p.price === '' || p.price == null ? NaN : Number(p.price)
   if (Number.isNaN(price) || price < 0) errors.push('Price is required and can’t be negative.')
   else if (decimals(p.price) > 3) errors.push('Price can have at most 3 decimals (baisa).')
