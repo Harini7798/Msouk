@@ -1,7 +1,7 @@
-FixItUp-style consolidated test run — MSouq Admin (FT3)
+MSouq Admin — consolidated test run
 ============================================================
 
-> vitest run --coverage (67 tests) ... ok (3.5 s)
+> vitest run --coverage (67 tests) ... ok (3.3 s)
 > npm run build ... ok (1.2 s)
 
 Execution summary
@@ -19,4 +19,4 @@ Execution summary
 
 Failing test cases: none — all designed cases that were automated are passing.
 
-Result: 0 of 67 automated FT3 test cases failing.
+Result: 0 of 67 automated test cases failing.

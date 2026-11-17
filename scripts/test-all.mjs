@@ -1,4 +1,4 @@
-// FT3 consolidated test run: unit/integration tests (categorised as ECP/BVA/DT/WB/UT/IT),
+// Consolidated test run: unit/integration tests (categorised as ECP/BVA/DT/WB/UT/IT),
 // coverage and the production build, with one summary printed to the terminal.
 import { execSync } from 'node:child_process'
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
@@ -21,7 +21,7 @@ function run(cmd) {
   }
 }
 
-log('FixItUp-style consolidated test run — MSouq Admin (FT3)')
+log('MSouq Admin — consolidated test run')
 log('='.repeat(60))
 
 // --- 1. Vitest, with coverage and a JSON report we can categorise ---
@@ -98,7 +98,7 @@ if (allFailedIds.length) {
   log('Failing test cases: none — all designed cases that were automated are passing.')
 }
 log('')
-log(`Result: ${totalFail} of ${totalExec} automated FT3 test cases failing.`)
+log(`Result: ${totalFail} of ${totalExec} automated test cases failing.`)
 
 writeFileSync(path.join(reportDir, 'test-output.txt'), lines.join('\n') + '\n')
 writeFileSync(path.join(reportDir, 'test-results.json'), JSON.stringify(report, null, 2))
