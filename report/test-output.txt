@@ -2,25 +2,25 @@ MSouq Admin — consolidated test run
 ============================================================
 
 > npm run lint ... ok (1.9 s)
-> vitest run --coverage (67 tests) ... ok (3.1 s)
-> playwright test (13 tests) ... ok (10.3 s)
-> npm run build ... ok (1.2 s)
+> vitest run --coverage (68 tests) ... ok (3.1 s)
+> playwright test (13 tests) ... ok (13.1 s)
+> npm run build ... ok (1.3 s)
 
 Execution summary
   Technique / level                           Executed    Passed    Failed
   Equivalence class partitioning (ECP)              16        16         0
-  Boundary value analysis (BVA)                     13        13         0
+  Boundary value analysis (BVA)                     14        14         0
   Decision tables (cause-effect) (DT)                8         8         0
   White box (paths, MC/DC) (WB)                      6         6         0
   Other unit tests (UT)                             18        18         0
   Other integration tests (IT)                       6         6         0
   Black-box UI automation (BB, Playwright)          13        13         0
-  Total (automated)                                 80        80         0
+  Total (automated)                                 81        81         0
 
-  Coverage (productFile.js, api.js): 67.64% functions, 75.72% lines, 69.94% branches
+  Coverage (productFile.js, api.js): 67.64% functions, 75.96% lines, 70.27% branches
   Lint (static analysis): PASS
   Build: PASS
 
 Failing test cases: none — all designed cases that were automated are passing.
 
-Result: 0 of 80 automated test cases failing.
+Result: 0 of 81 automated test cases failing.

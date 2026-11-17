@@ -135,6 +135,13 @@ describe('BVA — Boundary Value Analysis (checkProduct)', () => {
     expect(checkProduct({ ...base(), name: 'n'.repeat(LIMITS.name + 1) }).errors)
       .toContain(`Name can be at most ${LIMITS.name} characters.`)
   })
+
+  // Non-finite price: Number.isNaN(Infinity) is false, so this sits outside the NaN/negative
+  // class the ECP/BVA table above already covers — a boundary the single-fault table misses.
+  it('BVA-14 price = Infinity: rejected — defect D-04', () => {
+    expect(checkProduct({ ...base(), price: Infinity }).errors)
+      .toContain('Price must be a finite number.')
+  })
 })
 
 describe('DT — Decision Table (checkProduct: name x price x image)', () => {

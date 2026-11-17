@@ -104,6 +104,7 @@ export function checkProduct(p, groupSizes = {}) {
   else if (p.name.trim().length > LIMITS.name) errors.push(`Name can be at most ${LIMITS.name} characters.`)
   const price = p.price === '' || p.price == null ? NaN : Number(p.price)
   if (Number.isNaN(price) || price < 0) errors.push('Price is required and can’t be negative.')
+  else if (!Number.isFinite(price)) errors.push('Price must be a finite number.')
   else if (decimals(p.price) > 3) errors.push('Price can have at most 3 decimals (baisa).')
   if (p.original_price !== null && p.original_price !== '' && p.original_price !== undefined) {
     const original = Number(p.original_price)
