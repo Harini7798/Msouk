@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "lint": "eslint src tests scripts",
     "test:all": "node scripts/test-all.mjs"
   },
   "dependencies": {
@@ -16,8 +18,11 @@
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/coverage-v8": "^5.1.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-vue": "^10.12.1",
     "jsdom": "^31.0.1",
     "vite": "^8.2.2",
     "vite-plugin-vue-devtools": "^8.2.1",

@@ -1,0 +1,4 @@
+[
+  { "id": 1, "name": "First Product", "price": 10, "image_url": ["https://cdn.example.com/a.png"] },
+  { "id": 1, "name": "Second Product (same ID)", "price": 20, "image_url": ["https://cdn.example.com/b.png"] }
+]

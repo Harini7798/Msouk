@@ -39,5 +39,11 @@ coverage/
 # Vite
 *.timestamp-*-*.mjs
 
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+report/playwright-results.json
+
 # Claude Code local tooling
 .claude/

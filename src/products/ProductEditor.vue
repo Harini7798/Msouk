@@ -180,12 +180,17 @@ function addSpec() {
 }
 
 // --- Checks & actions ---
+// Same cross-file duplicate-ID check the Products file list runs, so the editor doesn't stay
+// silent about a conflict the list already flags for this product.
+const idDuplicate = computed(() => props.products.filter((p) => p.id === draft.value.id).length > 1)
 const checks = computed(() => {
   const product = toProduct(draft.value)
   const sizes = groupSizes([...others.value, product])
   // Products linked now count toward the group too.
   if (groupLower.value) sizes[groupLower.value] = Math.max(sizes[groupLower.value] || 0, versions.value.length + 1)
-  return checkProduct(product, sizes)
+  const result = checkProduct(product, sizes)
+  if (idDuplicate.value) result.errors = [`ID #${draft.value.id} is used by more than one product.`, ...result.errors]
+  return result
 })
 
 const showErrors = ref(false)

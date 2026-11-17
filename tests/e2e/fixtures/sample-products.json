@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Redmi 17 4/128GB - Black",
+    "price": 45.5,
+    "image_url": ["https://cdn.example.com/redmi17-black.png"],
+    "category": "Phones",
+    "color": "Black",
+    "variant_group": "redmi-17"
+  },
+  {
+    "id": 2,
+    "name": "Redmi 17 4/128GB - Blue",
+    "price": 45.5,
+    "image_url": ["https://cdn.example.com/redmi17-blue.png"],
+    "category": "Phones",
+    "color": "Blue",
+    "variant_group": "redmi-17"
+  },
+  {
+    "id": 3,
+    "name": "Broken Product (no image)",
+    "price": 10,
+    "image_url": [],
+    "category": "Accessories"
+  }
+]

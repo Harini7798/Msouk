@@ -184,7 +184,7 @@ const visible = computed(() => {
   })
   if (sort.value === 'name') list = [...list].sort((a, b) => (a.name || '').localeCompare(b.name || ''))
   else if (sort.value === 'newest') list = [...list].sort((a, b) => b.id - a.id)
-  else if (sort.value === 'group') list = [...list].sort((a, b) => (a.variant_group || '￿').localeCompare(b.variant_group || '￿') || (a.name || '').localeCompare(b.name || ''))
+  else if (sort.value === 'group') list = [...list].sort((a, b) => (a.variant_group || '�').localeCompare(b.variant_group || '�') || (a.name || '').localeCompare(b.name || ''))
   return list
 })
 const page = computed(() => visible.value.slice(0, shown.value))

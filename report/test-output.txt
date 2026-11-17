@@ -1,7 +1,9 @@
 MSouq Admin — consolidated test run
 ============================================================
 
-> vitest run --coverage (67 tests) ... ok (3.3 s)
+> npm run lint ... ok (1.9 s)
+> vitest run --coverage (67 tests) ... ok (3.1 s)
+> playwright test (13 tests) ... ok (10.3 s)
 > npm run build ... ok (1.2 s)
 
 Execution summary
@@ -12,11 +14,13 @@ Execution summary
   White box (paths, MC/DC) (WB)                      6         6         0
   Other unit tests (UT)                             18        18         0
   Other integration tests (IT)                       6         6         0
-  Total (automated)                                 67        67         0
+  Black-box UI automation (BB, Playwright)          13        13         0
+  Total (automated)                                 80        80         0
 
   Coverage (productFile.js, api.js): 67.64% functions, 75.72% lines, 69.94% branches
+  Lint (static analysis): PASS
   Build: PASS
 
 Failing test cases: none — all designed cases that were automated are passing.
 
-Result: 0 of 67 automated test cases failing.
+Result: 0 of 80 automated test cases failing.
